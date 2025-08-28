@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* ---------- CSS Reset ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: "Georgia", serif;
+    line-height: 1.6;
+    background-color: #fdfdfd;
+    color: #222;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    
+}
+body{
+    background-image: url(sweet.jpg)
+}
+
+
+/* ---------- Basic Styles idk what am i styling here ---------- */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a:hover {
+    border-bottom: 2px solid currentColor;
+}
+
+.hero {
+    display: grid;
+    place-items: center;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.about, .skills, .resume, .contact {
+    text-align: center;
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* ---------- Skills Section for the grid layout to reduce scrolling and create 3x2 grid layout for skills ---------- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.skill {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background: #fafafa;
+    font-weight: 500;
+}
+
+/* ---------- Resume ---------- */
+.resume {
+    text-align: center;
+}
+
+.resume-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    background: #222;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.resume-btn:hover {
+    background: #444;
+}
+
+/* ---------- Contact ---------- */
+.contact {
+    text-align: center;
+}
+
+.contact ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.contact li {
+    margin-bottom: 0.5rem;
+}
+
+.contact a {
+    color: #0077b6;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+.collab-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    background: #222;
+    color: #fff;
+    cursor: pointer;
+}
+
+.collab-btn:hover {
+    background: #444;
+}
+
+/* ---------- Responsive, Media query shit, responsiveness for mobile and dark mode using device preference---------- */
+@media (max-width: 768px) {
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+    }
+}
+
+/* ---------- Dark Mode preferes-color-scheme: dark ---------- */
+@media (prefers-color-scheme: dark) {
+    body {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    header {
+      border-bottom: 1px solid #333;
+    }
+
+    .skill {
+      background: #1e1e1e;
+      border: 1px solid #333;
+    }
+    .Personal Details {
+      background: #1e1e1e;
+      border: 3px solid #333;
+    }
+
+    .resume-btn {
+      background: #eee;
+      color: #121212;
+    }
+
+    .resume-btn:hover {
+      background: #ddd;
+    }
+
+    .contact a {
+      color: #4dabf7;
+    }
+
+    .collab-btn {
+      background: #eee;
+      color: #121212;
+    }
+
+    .collab-btn:hover {
+      background: #ddd;
+}
+}
+
+</style>
+
+<body>
+
+    <!-- Nav -->
+    <header>
+        <div class="logo"><b>Bebina's Portfolio</b></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Header/Hero Idk -->
+    <section class="hero" id="home">
+        <div>
+            <h1>bebina lenka</h1>
+            <p>"Building products for innovation"</p>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About Me</h2>
+        <div class="about-grid">
+            <p>
+            I am Bebina Lenka ,College Student with a strong foundation in Microsoft Excel ,Java,HTMLand C
+language, complemented by adeptness in oral presentations and
+faculty support. 
+            </p>
+            <p>
+                Excelled in academic commitments by actively
+engaging in classes and leveraging technical skills to support faculty
+projects. Demonstrates a unique blend of technical proficiency and
+interpersonal skills, aiming to apply these in a professional setting.
+                
+            </p>
+        </div>
+    </section>
+    <!-- professional Experience -->
+    <section class="professional Experience" id="professional Experience">
+        <h2>professional Experience</h2>
+        <div class="professional Experience-grid">
+            <h4>College Student</h4>
+            <p>
+        
+•Attended regularly scheduled instructional
+classes, taking organized notes and interacting
+positively.</p>
+<p>
+•
+Skilled at working independently and
+collaboratively in a team environment.</p>
+<p>
+•
+Passionate about learning and committed to
+continual improvement.</p>
+<p>
+•
+Managed time efficiently in order to complete all
+tasks within deadlines.
+            </p>
+            </div>
+            </section>
+    <!-- Personal Details -->
+     <section class="Personal Details" id="Personal Details">
+        <h2>Personal Details</h2>
+        <div class="Personal Details_grid">
+            <div class="skill">Date Of Birth:07/03/2006</div>
+            <div class="skill">Nationality:Indian</div>
+            <div class="skill">Marital status:single</div>
+            <div class="skill">Gender:Female</div>
+            <div class="skill">Regigion:Hindu</div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+     <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill">C</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Java</div>
+        </div>
+    </section>
+
+
+    <!-- Resume -->
+    <section class="resume" id="resume">
+        <h2>Resume</h2>
+        <p>You can view or download my resume below:</p>
+        <a href="Resume_Bebina.pdf" class="resume-btn" download>Download Resume</a>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to connect, feel free to reach out:</p>
+        <ul>
+            <li>Email: <a href="Bebinalenka07@gmail.com">Bebinalenka07@gmail.com</a></li>
+            <li>Address: <a href="Baripada, India757001">Baripada, India757001</a></li>
+            <li>Phone: <a href="6372691837">6372691837</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/Bebinalenka-Bebina-113828322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">My LinkedIn Profile</a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <button class="collab-btn">Let's Collaborate!</button>
+    </footer>
+
+</body>
+
+</html>
